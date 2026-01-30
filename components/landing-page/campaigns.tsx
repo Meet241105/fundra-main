@@ -38,11 +38,11 @@ const sampleCampaigns = [
 export default function Campaigns() {
   return (
     <section className="relative py-32 px-6 overflow-hidden">
-      {/* Background */}
+      
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Section header */}
+        
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
           <div>
             <span className="font-mono-alt text-hope text-sm tracking-widest uppercase">
@@ -64,7 +64,7 @@ export default function Campaigns() {
           </Link>
         </div>
 
-        {/* Campaigns grid */}
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sampleCampaigns.map((campaign) => {
             const progress = (campaign.raised / campaign.goal) * 100
@@ -74,7 +74,7 @@ export default function Campaigns() {
                 key={campaign.id}
                 className="group relative bg-card border border-border rounded-2xl overflow-hidden hover:border-hope/40 transition-all duration-300 hover:shadow-[0_0_40px_rgba(91,187,125,0.1)] hover:scale-[1.02] hover:-translate-y-1"
               >
-                {/* Image placeholder */}
+                
                 <div className="h-48 bg-gradient-to-br from-hope/20 to-emerald-500/10 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                   <div className="absolute top-4 left-4">
@@ -84,7 +84,7 @@ export default function Campaigns() {
                   </div>
                 </div>
 
-                {/* Content */}
+                
                 <div className="p-6">
                   <h3 className="font-display text-xl font-bold mb-2 group-hover:text-hope transition-colors">
                     {campaign.title}
@@ -93,7 +93,7 @@ export default function Campaigns() {
                     {campaign.description}
                   </p>
 
-                  {/* Progress */}
+
                   <div className="space-y-3">
                     <div className="flex justify-between text-sm">
                       <span className="text-hope font-semibold">${campaign.raised.toLocaleString()}</span>
